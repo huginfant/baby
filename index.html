@@ -90,6 +90,14 @@
       .why__wrap{grid-template-columns:1fr}
       .card img{height:200px}
     }
+      /* Mobile-friendly nav overrides */
+    .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;line-height:1;height:40px;width:40px;border-radius:10px}
+    .menu-toggle:focus{outline:2px solid #00000022}
+    @media (max-width: 940px){
+      .nav__links{display:none;flex-direction:column;gap:12px;position:absolute;top:64px;right:16px;background:#fff;padding:16px;border-radius:var(--radius);box-shadow: var(--shadow)}
+      .nav__links.show{display:flex}
+      .menu-toggle{display:block}
+    }
   </style>
   
   <!-- JSON-LD: Organization & Website -->
@@ -114,7 +122,8 @@
         <div class="brand__logo" aria-hidden="true">👶</div>
         <span>Bundle of Joy Games</span>
       </div>
-      <nav class="nav__links" aria-label="Primary">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
+      <nav class="nav__links" id="primary-nav" aria-label="Primary">
         <a href="#products">Games</a>
         <a href="#how">How it works</a>
         <a href="#reviews">Reviews</a>
