@@ -304,6 +304,16 @@
         }
       })
     })
+
+    // mobile nav toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const primaryNav = document.getElementById('primary-nav');
+    if (toggleBtn && primaryNav){
+      toggleBtn.addEventListener('click', () => {
+        const shown = primaryNav.classList.toggle('show');
+        toggleBtn.setAttribute('aria-expanded', shown ? 'true' : 'false');
+      });
+    }
   </script>
 </body>
 </html>
