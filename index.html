@@ -2,319 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bundle of Joy Games — Baby Shower Games</title>
-  <meta name="description" content="Make every baby shower unforgettable with beautifully designed, printable game sets. Instant download, easy-to-play instructions, and adorable themes." />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby Shower Games Printables - Bundle of Joy Games</title>
+  <meta name="description" content="Fun and interactive printable baby shower games to make your celebration unforgettable. Instant downloads, beautifully designed, and perfect for any party!" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <style>
-    :root{
-      --pink:#FADADD; /* pastel pink */
-      --blue:#D6EAF8; /* baby blue */
-      --mint:#D1F2EB; /* mint green */
-      --cream:#FEF9E7; /* warm neutral */
-      --coral:#F5B7B1; /* primary CTA */
-      --ink:#333333;
-      --ink-soft:#555555;
-      --shadow: 0 10px 30px rgba(0,0,0,.06);
-      --radius: 18px;
-      --radius-sm: 12px;
-      --maxw: 1200px;
+    body { font-family: 'Inter', sans-serif; }
+    .hero {
+      background: linear-gradient(135deg, #fdf2f8, #fce7f3);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family: 'Quicksand', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); background:#fff;}
-    .container{max-width:var(--maxw); margin:0 auto; padding: clamp(16px, 2vw, 28px);} 
-    h1,h2,h3{font-family:'Pacifico', cursive; margin:0 0 12px; line-height:1.2}
-    p{color:var(--ink-soft); line-height:1.7; margin:0 0 14px}
-    a.btn{display:inline-block; background:var(--coral); color:#fff; padding:14px 24px; border-radius:999px; text-decoration:none; font-weight:700; transition: transform .08s ease, box-shadow .2s ease; box-shadow: var(--shadow);} 
-    a.btn:hover{transform:translateY(-2px)}
-    .tag{display:inline-block; background:#fff; color:var(--ink); border:1px solid #eee; border-radius:999px; padding:6px 12px; font-size:12px; font-weight:600}
-
-    /* Header */
-    header{position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid #f0f0f0}
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
-    .brand__logo{width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg, var(--pink), var(--mint)); display:grid; place-items:center; font-weight:900}
-    .nav__links{display:flex; gap:14px; align-items:center}
-    .nav__links a{color:var(--ink); text-decoration:none; font-weight:600}
-    .nav__cta{margin-left:6px}
-
-    /* Hero */
-    .hero{background:linear-gradient(180deg, var(--pink), #fff); position:relative; overflow:hidden}
-    .hero__wrap{display:grid; grid-template-columns: 1.1fr .9fr; align-items:center; gap: clamp(20px, 4vw, 48px)}
-    .hero__img{border-radius: var(--radius); box-shadow: var(--shadow); width:100%; height:auto}
-    .hero h1{font-size: clamp(32px, 4vw, 56px)}
-    .hero p{font-size: clamp(16px, 1.8vw, 18px)}
-
-    /* Product grid */
-    .grid{display:grid; gap:18px}
-    .grid--3{grid-template-columns: repeat(3, 1fr)}
-    .card{background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow:hidden; display:flex; flex-direction:column}
-    .card img{width:100%; height:220px; object-fit:cover}
-    .card__body{padding:18px}
-    .price{font-weight:800; color:#1c1c1c}
-    .card__actions{display:flex; gap:10px; align-items:center; margin-top:auto; padding:0 18px 18px}
-    .btn--ghost{background:transparent; color:var(--ink); border:1px solid #e7e7e7; padding:12px 18px; border-radius:999px; text-decoration:none; font-weight:700}
-
-    /* Steps */
-    .steps{background:var(--mint)}
-    .steps__grid{display:grid; gap:18px; grid-template-columns: repeat(3, 1fr)}
-    .step{background:#fff; border-radius: var(--radius); padding:20px; text-align:center; box-shadow: var(--shadow)}
-    .step img{width:72px; height:72px}
-
-    /* Reviews */
-    .reviews{background:var(--cream)}
-    .review{background:#fff; border-radius: var(--radius); padding:20px; box-shadow: var(--shadow)}
-
-    /* Why us */
-    .why{background:var(--blue)}
-    .why__wrap{display:grid; gap:24px; grid-template-columns: 1fr 1fr; align-items:center}
-    .why__img{width:100%; border-radius: var(--radius); box-shadow: var(--shadow)}
-    .why ul{list-style:none; padding:0; margin:0}
-    .why li{margin:10px 0; display:flex; gap:10px; align-items:flex-start}
-    .why li span{font-weight:800}
-
-    /* CTA band */
-    .cta{background:var(--pink); text-align:center; padding:56px 16px}
-    .cta h2{font-size: clamp(24px, 3vw, 40px)}
-
-    /* Footer */
-    footer{background:#f3f0ec}
-    footer a{color:var(--ink); text-decoration:none}
-
-    /* Mobile */
-    @media (max-width: 940px){
-      .hero__wrap{grid-template-columns:1fr}
-      .grid--3{grid-template-columns:1fr}
-      .steps__grid{grid-template-columns:1fr}
-      .why__wrap{grid-template-columns:1fr}
-      .card img{height:200px}
+    .btn {
+      @apply px-6 py-3 bg-pink-500 text-white font-semibold rounded-2xl shadow-md hover:bg-pink-600 transition;
     }
-      /* Mobile-friendly nav overrides */
-    .menu-toggle{display:none;background:none;border:none;font-size:28px;cursor:pointer;line-height:1;height:40px;width:40px;border-radius:10px}
-    .menu-toggle:focus{outline:2px solid #00000022}
-    @media (max-width: 940px){
-      .nav__links{display:none;flex-direction:column;gap:12px;position:absolute;top:64px;right:16px;background:#fff;padding:16px;border-radius:var(--radius);box-shadow: var(--shadow)}
-      .nav__links.show{display:flex}
-      .menu-toggle{display:block}
+    .card {
+      @apply bg-white rounded-2xl shadow-md p-6;
+    }
+    .testimonials {
+      background-color: #f9fafb;
+    }
+    .footer {
+      background-color: #f3f4f6;
+    }
+    .hero__img {
+      border-radius: 1rem;
+      width: 100%;
+      height: auto;
+    }
+    .tag {
+      background-color: #fef3c7;
+      color: #92400e;
+      font-size: 0.8rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 0.5rem;
     }
   </style>
-  
-  <!-- JSON-LD: Organization & Website -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://cdn.gumroad.com/js/gumroad-embed.js"></script>
+  <script>
+    function toggleMenu(){
+      document.getElementById('primary-nav').classList.toggle('hidden');
+    }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Bundle of Joy Games",
-    "url": "https://example.com",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://example.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "@type": "Product",
+    "name": "Ultimate Baby Shower Games Bundle",
+    "description": "A complete pack of 15 printable baby shower games with answer keys and easy instructions. Instant download or optional print & ship.",
+    "image": ["https://github.com/huginfant/baby/blob/main/Add%20a%20heading%20(1).png?raw=true"],
+    "brand": {"@type":"Brand","name":"Bundle of Joy Games"},
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "29.99",
+      "availability": "https://schema.org/InStock",
+      "url": "https://yourstore.gumroad.com/l/YOUR_BUNDLE_ID"
     }
   }
   </script>
 </head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand" aria-label="Bundle of Joy Games">
-        <div class="brand__logo" aria-hidden="true">👶</div>
-        <span>Bundle of Joy Games</span>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">☰</button>
-      <nav class="nav__links" id="primary-nav" aria-label="Primary">
+<body class="font-sans text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <div class="container flex justify-between items-center py-4">
+      <div class="text-2xl font-bold text-pink-500">Bundle of Joy Games</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#bundle">Bundle</a>
         <a href="#products">Games</a>
         <a href="#how">How it works</a>
         <a href="#reviews">Reviews</a>
         <a href="#why">Why us</a>
-        <a href="#contact" class="nav__cta btn">Shop now</a>
+        <a href="#contact" class="nav__cta">Shop now</a>
       </nav>
+      <button class="md:hidden p-2" onclick="toggleMenu()">☰</button>
     </div>
+    <nav class="nav__links hidden md:hidden" id="primary-nav">
+      <a href="#bundle">Bundle</a>
+      <a href="#products">Games</a>
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Shop now</a>
+    </nav>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__wrap">
-        <div>
-          <h1 id="hero-title">Make Every Baby Shower Unforgettable!</h1>
-          <p>Skip the stress and bring on the fun! Our beautifully designed, interactive baby shower games are the perfect way to break the ice and create joyful memories for the mom‑to‑be.</p>
-          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:18px 0 8px">
-            <a href="#products" class="btn" aria-label="Browse game collections">Browse Collections</a>
-            <span class="tag" aria-label="Instant download available">Instant download</span>
-            <span class="tag" aria-label="Print & ship option">Print & ship</span>
-          </div>
-        </div>
-        <div>
-          <img class="hero__img" src="https://github.com/huginfant/baby/blob/main/2%20(1).png?raw=true" alt="Smiling guests at a baby shower with pastel balloons"  
-            class="rounded-2xl shadow-lg" />
-        </div>
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Fun Baby Shower Games for Unforgettable Moments</h1>
+      <p class="mt-4 text-lg">Create laughter and lasting memories with our printable baby shower game bundle.</p>
+      <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:18px 0 8px">
+        <a href="#bundle" class="btn" aria-label="Browse featured bundle">Browse Bundle</a>
+        <span class="tag" aria-label="Instant download available">Instant download</span>
+        <span class="tag" aria-label="Print & ship option">Print & ship</span>
       </div>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="container" aria-labelledby="products-title" style="padding-top:42px; padding-bottom:20px">
-      <h2 id="products-title">Our Most Loved Games</h2>
-      <p>Adorable themes, easy instructions, instant fun. Pick a set and start celebrating.</p>
-      <div class="grid grid--3" style="margin-top:16px">
-        <!-- Card 1 -->
-        <article class="card" itemscope itemtype="https://schema.org/Product">
-          <img src="https://github.com/huginfant/baby/blob/99823034d039f86e6ace45d5706fbaa80eb43fbd/Add%20a%20heading%20(1).png?raw=true" alt="Minimalist modern printable baby shower games" loading="lazy">
-          <div class="card__body">
-            <h3 itemprop="name">Minimalist Modern Set</h3>
-            <p itemprop="description">Clean, elegant designs for a chic celebration. Includes 10 printable games like <em>Baby Bingo</em> and <em>Wishes for Baby</em>.</p>
-            <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-              <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="12.99">12.99</span>
-            </p>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn" aria-label="Add Minimalist Modern Set to cart">Add to Cart</a>
-            <a href="#" class="btn--ghost" aria-label="Learn more about Minimalist Modern Set">Learn More</a>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="card" itemscope itemtype="https://schema.org/Product">
-          <img src="https://github.com/huginfant/baby/blob/main/Baby-Shower-ABC-Alphabet-Game-4-Adults-Graphics-11588322-1-580x386.png?raw=true" alt="Whimsical woodland baby shower game cards" loading="lazy">
-          <div class="card__body">
-            <h3 itemprop="name">Whimsical Woodland Set</h3>
-            <p itemprop="description">Adorable forest friends adorn 12 games, including <em>Animal Gestation</em> and <em>Baby Name Race</em>.</p>
-            <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-              <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="14.99">14.99</span>
-            </p>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn" aria-label="Add Whimsical Woodland Set to cart">Add to Cart</a>
-            <a href="#" class="btn--ghost" aria-label="Learn more about Whimsical Woodland Set">Learn More</a>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="card" itemscope itemtype="https://schema.org/Product">
-          <img src="https://github.com/huginfant/baby/blob/main/Baby-Shower-ABC-Party-Game-for-Adults-Graphics-11573264-1-580x386.png?raw=true" alt="Boho baby shower games with rainbows and pampas" loading="lazy">
-          <div class="card__body">
-            <h3 itemprop="name">Boho Baby Bundle</h3>
-            <p itemprop="description">Earthy tones and rainbows. Our biggest bundle with 15 instant‑download games.</p>
-            <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-              <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.99">19.99</span>
-            </p>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn" aria-label="Add Boho Baby Bundle to cart">Add to Cart</a>
-            <a href="#" class="btn--ghost" aria-label="Learn more about Boho Baby Bundle">Learn More</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how" class="steps" aria-labelledby="how-title">
-      <div class="container">
-        <h2 id="how-title">Get the Fun Started in 3 Easy Steps</h2>
-        <div class="steps__grid" style="margin-top:16px">
-          <div class="step">
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f3ae.svg" alt="Choose your set icon" />
-            <h3>1. Choose Your Set</h3>
-            <p>Browse our unique collections and find the perfect theme for your baby shower.</p>
-          </div>
-          <div class="step">
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2b07.svg" alt="Download icon" />
-            <h3>2. Download or Get Delivered</h3>
-            <p>Instant PDFs to print at home, or upgrade to premium print‑and‑ship.</p>
-          </div>
-          <div class="step">
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f389.svg" alt="Party icon" />
-            <h3>3. Enjoy the Party!</h3>
-            <p>Hand out the games, share a laugh, and celebrate the new arrival.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews -->
-    <section id="reviews" class="reviews" aria-labelledby="reviews-title">
-      <div class="container">
-        <h2 id="reviews-title">What Our Happy Hosts Are Saying</h2>
-        <div class="grid grid--3" style="margin-top:16px">
-          <figure class="review">
-            <blockquote>“The Woodland games were an absolute HIT! The designs were so cute and everyone loved playing.”</blockquote>
-            <figcaption>★★★★★ — <strong>Jessica L.</strong></figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote>“I was in a pinch and needed games fast. The instant download was a lifesaver! So easy to print.”</blockquote>
-            <figcaption>★★★★★ — <strong>Maria P.</strong></figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote>“So much better than generic store games. ‘Wishes for Baby’ is now a treasured keepsake.”</blockquote>
-            <figcaption>★★★★★ — <strong>Chloe T.</strong></figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why choose us -->
-    <section id="why" class="why" aria-labelledby="why-title">
-      <div class="container why__wrap">
-        <div>
-          <img class="why__img" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1400&auto=format&fit=crop" alt="Stack of beautifully designed game cards" loading="lazy" />
-        </div>
-        <div>
-          <h2 id="why-title">More Laughs, Less Hassle</h2>
-          <ul>
-            <li>✅ <span>Unique, Modern Designs:</span> Stand out with games that look as good as they play.</li>
-            <li>✅ <span>Instant Access:</span> Download minutes after purchase. No waiting!</li>
-            <li>✅ <span>Easy Instructions:</span> Simple, fun, perfect for all guests.</li>
-            <li>✅ <span>Affordable Fun:</span> Premium experience without the premium price.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA band -->
-    <section class="cta" aria-labelledby="cta-title">
-      <div class="container" style="text-align:center">
-        <h2 id="cta-title">Get Your Baby Shower Games Today and Make Memories That Last!</h2>
-        <a href="#" class="btn" style="margin-top:12px">Shop Games Now</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer aria-labelledby="footer-title">
-    <div class="container" style="text-align:center">
-      <h2 id="footer-title" class="sr-only" style="position:absolute;left:-9999px">Footer</h2>
-      <p style="margin:0 0 8px">
-        <a href="#">About Us</a> • <a href="#">Contact</a> • <a href="#">FAQ</a> • <a href="#">Shipping &amp; Returns</a>
-      </p>
-      <p style="font-size:12px; color:#777">© <span id="year"></span> Bundle of Joy Games. All Rights Reserved.</p>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <!-- Featured Bundle -->
+  <section id="bundle" class="container" aria-labelledby="bundle-title" style="padding-top:42px; padding-bottom:8px">
+    <div class="card" style="overflow:hidden; display:grid; grid-template-columns: 1.1fr .9fr; gap:16px; align-items:center">
+      <div class="card__body" style="padding:24px">
+        <h2 id="bundle-title">Ultimate Baby Shower Games <span class="tag">Bundle</span></h2>
+        <p style="margin-top:6px">All our best-selling games in one adorable pack: <em>Baby Bingo</em>, <em>Wishes for Baby</em>, <em>Animal Gestation</em>, <em>Name Race</em>, and more. Perfect for any theme, printable or shipped.</p>
+        <ul style="margin:12px 0 6px; padding-left:18px">
+          <li>15 premium, ready-to-print games</li>
+          <li>Instant download + optional print &amp; ship</li>
+          <li>Includes answer keys &amp; simple instructions</li>
+        </ul>
+        <p class="price" style="font-size:22px; margin:8px 0 14px"><strong>$29.99</strong> <span class="tag" aria-label="Savings">Save 30%</span></p>
+        <!-- Replace the href with your real Gumroad link -->
+        <a class="btn gumroad-button" href="https://yourstore.gumroad.com/l/YOUR_BUNDLE_ID" aria-label="Buy the Ultimate Baby Shower Games Bundle">Buy the Bundle</a>
+        <script src="https://gumroad.com/js/gumroad.js"></script>
+      </div>
+      <div>
+        <!-- Updated to your GitHub image -->
+        <img class="why__img" src="https://github.com/huginfant/baby/blob/main/Add%20a%20heading%20(1).png?raw=true" alt="Preview of the Ultimate Baby Shower Games Bundle" loading="lazy" />
+      </div>
+    </div>
+  </section>
 
-    // basic smooth scroll for same-page anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        if(id.length>1){
-          const el = document.querySelector(id);
-          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'});} 
-        }
-      })
-    })
+  <!-- Products Section -->
+  <section id="products" class="container" aria-labelledby="products-title" style="padding-top:42px; padding-bottom:8px">
+    <h2 id="products-title">Shop Baby Shower Game Collections</h2>
+    <p style="margin-top:6px;">Beautifully designed, ready-to-print PDF games — fun for every guest!</p>
+    <div class="grid">
+      <div class="card">
+        <h3 class="font-semibold text-lg">Baby Bingo</h3>
+        <img src="https://github.com/huginfant/baby/blob/99823034d039f86eace45d5706fbaa80eb43fbd/Add%20a%20heading%20(1).png?raw=true" alt="Minimalist modern printable baby shower games" loading="lazy" />
+        <p class="mt-2">Classic bingo game with a baby shower twist.</p>
+        <p class="price">$4.99</p>
+        <!-- Replace the href with your real Gumroad link -->
+        <a href="#" class="btn gumroad-button" aria-label="Buy Baby Bingo">Buy Now</a>
+      </div>
+      <!-- Add more product cards here -->
+    </div>
+  </section>
 
-    // mobile nav toggle
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const primaryNav = document.getElementById('primary-nav');
-    if (toggleBtn && primaryNav){
-      toggleBtn.addEventListener('click', () => {
-        const shown = primaryNav.classList.toggle('show');
-        toggleBtn.setAttribute('aria-expanded', shown ? 'true' : 'false');
-      });
-    }
-  </script>
+  <!-- How It Works -->
+  <section id="how" class="container" aria-labelledby="how-title">
+    <h2 id="how-title">How It Works</h2>
+    <div class="grid">
+      <div class="card">
+        <h3 class="font-semibold">1. Choose Your Games</h3>
+        <p>Select from a variety of fun baby shower games, or grab our best-value bundle.</p>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold">2. Get Instant Access</h3>
+        <p>Receive your chosen games immediately after purchase as easy-to-print PDFs.</p>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold">3. Celebrate Together</h3>
+        <p>Play with your guests and make lasting memories.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="testimonials container" aria-labelledby="reviews-title">
+    <h2 id="reviews-title">What Our Customers Say</h2>
+    <div class="grid">
+      <div class="card">
+        <p>"These baby shower games were a huge hit at our party! Everyone had a blast." – Sarah L.</p>
+      </div>
+      <div class="card">
+        <p>"So easy to download and print. The designs are beautiful!" – Emily R.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="container" aria-labelledby="why-title">
+    <h2 id="why-title">Why Choose Bundle of Joy Games?</h2>
+    <ul class="list-disc list-inside mt-4 space-y-2">
+      <li>Easy and quick to set up</li>
+      <li>Fun and engaging for all ages</li>
+      <li>Beautiful designs to match your party theme</li>
+      <li>Instant access or printed delivery</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container" aria-labelledby="contact-title">
+    <h2 id="contact-title">Get in Touch</h2>
+    <p>Have questions or special requests? We’d love to hear from you!</p>
+    <a href="mailto:hello@bundleofjoygames.com" class="btn mt-4">Contact Us</a>
+  </section>
 </body>
 </html>
